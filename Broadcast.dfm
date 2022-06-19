@@ -1,0 +1,202 @@
+object frmBroadcast: TfrmBroadcast
+  Left = 0
+  Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = #25351#20196#25773#25918#20013'......'
+  ClientHeight = 464
+  ClientWidth = 857
+  Color = clBtnFace
+  DoubleBuffered = True
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object gbInstructionDetail: TGroupBox
+    Left = 8
+    Top = 8
+    Width = 841
+    Height = 410
+    Caption = #25351#20196#35814#24773
+    TabOrder = 0
+    object lblTime: TLabel
+      Left = 272
+      Top = 118
+      Width = 77
+      Height = 21
+      Caption = 'lblTime'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -21
+      Font.Name = #40657#20307
+      Font.Style = []
+      ParentFont = False
+    end
+    object lblNextInstructionHint: TLabel
+      Left = 24
+      Top = 168
+      Width = 110
+      Height = 21
+      Caption = #24403#21069#25351#20196#65306
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -21
+      Font.Name = #40657#20307
+      Font.Style = []
+      ParentFont = False
+    end
+    object lblEnd: TLabel
+      Left = 272
+      Top = 91
+      Width = 66
+      Height = 21
+      Caption = 'lblEnd'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -21
+      Font.Name = #40657#20307
+      Font.Style = []
+      ParentFont = False
+    end
+    object lblStart: TLabel
+      Left = 272
+      Top = 64
+      Width = 88
+      Height = 21
+      Caption = 'lblStart'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -21
+      Font.Name = #40657#20307
+      Font.Style = []
+      ParentFont = False
+    end
+    object lblSubject: TLabel
+      Left = 272
+      Top = 37
+      Width = 110
+      Height = 21
+      Caption = 'lblSubject'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -21
+      Font.Name = #40657#20307
+      Font.Style = []
+      ParentFont = False
+    end
+    object lblTimeHint: TLabel
+      Left = 75
+      Top = 118
+      Width = 198
+      Height = 21
+      Caption = #35745#31639#26426#24403#21069#26102#38388#20026#65306
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -21
+      Font.Name = #40657#20307
+      Font.Style = []
+      ParentFont = False
+    end
+    object lblEndHint: TLabel
+      Left = 119
+      Top = 91
+      Width = 154
+      Height = 21
+      Caption = #32771#35797#32467#26463#26102#38388#65306
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -21
+      Font.Name = #40657#20307
+      Font.Style = []
+      ParentFont = False
+    end
+    object lblStartHint: TLabel
+      Left = 119
+      Top = 64
+      Width = 154
+      Height = 21
+      Caption = #32771#35797#24320#22987#26102#38388#65306
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -21
+      Font.Name = #40657#20307
+      Font.Style = []
+      ParentFont = False
+    end
+    object lblSubjectHint: TLabel
+      Left = 163
+      Top = 37
+      Width = 110
+      Height = 21
+      Caption = #32771#35797#31185#30446#65306
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -21
+      Font.Name = #40657#20307
+      Font.Style = []
+      ParentFont = False
+    end
+    object edNextInstructionTime: TEdit
+      Left = 24
+      Top = 200
+      Width = 801
+      Height = 21
+      ReadOnly = True
+      TabOrder = 0
+    end
+    object mmInstructionDetail: TMemo
+      Left = 24
+      Top = 232
+      Width = 801
+      Height = 161
+      ReadOnly = True
+      ScrollBars = ssVertical
+      TabOrder = 1
+    end
+    object mpInstructionPlayer: TMediaPlayer
+      Left = 585
+      Top = 128
+      Width = 253
+      Height = 49
+      Visible = False
+      TabOrder = 2
+    end
+  end
+  object btnExit: TButton
+    Left = 576
+    Top = 424
+    Width = 129
+    Height = 25
+    Caption = #36820#22238#39318#39029
+    TabOrder = 1
+    OnClick = btnExitClick
+  end
+  object btnDetail: TButton
+    Left = 152
+    Top = 424
+    Width = 129
+    Height = 25
+    Caption = #25773#25918#21015#34920
+    TabOrder = 2
+    OnClick = btnDetailClick
+  end
+  object tmrUpdate: TTimer
+    Enabled = False
+    Interval = 100
+    OnTimer = tmrUpdateTimer
+    Left = 808
+    Top = 24
+  end
+  object xmlInstructions: TXMLDocument
+    Left = 808
+    Top = 80
+    DOMVendorDesc = 'MSXML'
+  end
+end
